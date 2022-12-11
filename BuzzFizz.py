@@ -1,0 +1,2 @@
+print('podaj liczbę')
+input()
