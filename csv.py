@@ -13,10 +13,19 @@ total=0
 for i in range(1,len(content)):
     total = total + int(content[i][1])
 average = total / (len(content)-1)
-print(round(average,2))
+print (round(average,2))
 
 total1=0
 for i in range(1,len(content)):
-    if content[i][3] == 'k' and content[i][4] == 't\n'
-        total1 += 1
+    ilosc = len(content[i])
+#    print(ilosc)
+    content[i][4] = content[i][4].replace('\n','',1)
+    if ilosc == 5:
+        if content[i][4] == 't' or content[i][4] == 'n':
+            if content[i][3] == 'k' and content[i][4] == 't':
+                total1 += 1
+        else:
+            print('w kolumnie 5 złe dane')
+    else:
+        print('zła ilość danych')
 print(total1)
