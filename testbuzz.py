@@ -1,2 +1,3 @@
-def test_0()
-    assert BuzzFizz(1) == 1
+from BuzzFizz import *
+def test_0():
+    assert buzzfizzm(1) == 1
