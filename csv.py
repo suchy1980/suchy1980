@@ -19,7 +19,7 @@ total1=0
 for i in range(1,len(content)):
     ilosc = len(content[i])
 #    print(ilosc)
-    content[i][4] = content[i][4].replace('\n','',1)
+    content[i][ilosc-1] = content[i][ilosc-1].replace('\n','',1)
     if ilosc == 5:
         if content[i][4] == 't' or content[i][4] == 'n':
             if content[i][3] == 'k' and content[i][4] == 't':
@@ -27,5 +27,5 @@ for i in range(1,len(content)):
         else:
             print('w kolumnie 5 złe dane')
     else:
-        print('zła ilość danych')
+        print('zła ilość danych w linii' + str(content[i]))
 print(total1)
