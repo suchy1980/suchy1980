@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.11.0 on win32)" generated="20230129 13:29:57.388" rpa="false" schemaversion="3">
+<suite id="s1" name="11 API" source="C:\Users\vdi-student\PycharmProjects\suchy1980\11_API.robot">
+<test id="s1-t1" name="GET_STATUS" line="9">
+<kw name="GET">
+<var>${get_response}</var>
+<arg>${http}/status</arg>
+<msg timestamp="20230129 13:29:57.433" level="FAIL">No keyword with name 'GET' found. Did you mean:
+    BuiltIn.Get Time</msg>
+<status status="FAIL" starttime="20230129 13:29:57.433" endtime="20230129 13:29:57.438"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>status ${get_response}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20230129 13:29:57.438" endtime="20230129 13:29:57.438"/>
+</kw>
+<status status="FAIL" starttime="20230129 13:29:57.433" endtime="20230129 13:29:57.438">No keyword with name 'GET' found. Did you mean:
+    BuiltIn.Get Time</status>
+</test>
+<test id="s1-t2" name="GET_BOOKS" line="12">
+<kw name="GET">
+<var>${get_response}</var>
+<arg>${http}/books</arg>
+<msg timestamp="20230129 13:29:57.443" level="FAIL">No keyword with name 'GET' found. Did you mean:
+    BuiltIn.Get Time</msg>
+<status status="FAIL" starttime="20230129 13:29:57.443" endtime="20230129 13:29:57.443"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>status ${get_response}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20230129 13:29:57.443" endtime="20230129 13:29:57.443"/>
+</kw>
+<status status="FAIL" starttime="20230129 13:29:57.438" endtime="20230129 13:29:57.443">No keyword with name 'GET' found. Did you mean:
+    BuiltIn.Get Time</status>
+</test>
+<test id="s1-t3" name="POST_REGISTRATION" line="15">
+<kw name="Create Dictionary" library="BuiltIn">
+<var>${register_json}</var>
+<arg>clientName=${client}</arg>
+<arg>clientEmail=${mail}</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<msg timestamp="20230129 13:29:57.443" level="INFO">${register_json} = {'clientName': 'Lukasz', 'clientEmail': 'lukasz@example.com'}</msg>
+<status status="PASS" starttime="20230129 13:29:57.443" endtime="20230129 13:29:57.443"/>
+</kw>
+<kw name="POST">
+<var>${post_register_response}</var>
+<arg>${http}/api-clients/</arg>
+<arg>json=${register_json}</arg>
+<msg timestamp="20230129 13:29:57.448" level="FAIL">No keyword with name 'POST' found.</msg>
+<status status="FAIL" starttime="20230129 13:29:57.448" endtime="20230129 13:29:57.448"/>
+</kw>
+<status status="FAIL" starttime="20230129 13:29:57.443" endtime="20230129 13:29:57.448">No keyword with name 'POST' found.</status>
+</test>
+<status status="FAIL" starttime="20230129 13:29:57.393" endtime="20230129 13:29:57.448"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="3" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="3" skip="0" id="s1" name="11 API">11 API</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20230129 13:29:57.428" level="ERROR">Error in file 'C:\Users\vdi-student\PycharmProjects\suchy1980\11_API.robot' on line 2: Importing library 'RequestsLibrary' failed: ModuleNotFoundError: No module named 'RequestsLibrary'
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  C:\Program Files\Python311\Scripts\robot.exe
+  C:\Program Files\Python311\python311.zip
+  C:\Program Files\Python311\Lib
+  C:\Program Files\Python311\DLLs
+  C:\Program Files\Python311
+  C:\Program Files\Python311\Lib\site-packages</msg>
+</errors>
+</robot>
